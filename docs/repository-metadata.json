@@ -1,0 +1,13 @@
+{
+  "name": "sleep-llm-finetuning",
+  "owner": "YIM551",
+  "description": "Report-backed study of staged sleep-domain LLM fine-tuning with automatic metrics and pairwise LLM-judge evaluation.",
+  "topics": [
+    "llm",
+    "fine-tuning",
+    "mistral",
+    "model-evaluation",
+    "rouge",
+    "bertscore"
+  ]
+}

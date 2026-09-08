@@ -1,0 +1,5 @@
+stage,strategy,base_rouge1,ft_rouge1,base_rouge2,ft_rouge2,base_rougeL,ft_rougeL,base_rougeLsum,ft_rougeLsum,base_sentence_bleu,ft_sentence_bleu,base_corpus_bleu,ft_corpus_bleu,base_bertscore_f1,ft_bertscore_f1,judge_pairs,ft_winrate,base_winrate,invalid
+stage1,factual,0.3159,0.3939,0.0866,0.2041,0.1781,0.2697,0.2109,0.2811,3.7745,12.2603,3.9394,17.1373,0.7860,0.8199,50,0.66,0.32,1
+stage2,counseling,0.2701,0.3161,0.0303,0.0800,0.1322,0.1855,0.1658,0.1855,1.5308,5.7833,1.2334,8.0054,0.7609,0.7856,50,0.74,0.26,0
+stage3,warmstart,0.2740,0.2985,0.0342,0.0876,0.1340,0.1766,0.1687,0.1825,1.6157,5.1164,1.4617,7.5495,0.7634,0.7664,50,0.90,0.10,0
+stage3,scratch,0.2740,0.3041,0.0342,0.0962,0.1340,0.1840,0.1687,0.1878,1.6157,5.7089,1.4617,8.1795,0.7634,0.7648,50,0.92,0.08,0
