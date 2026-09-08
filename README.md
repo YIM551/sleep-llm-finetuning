@@ -37,6 +37,8 @@ flowchart LR
 
 보고서에서 확인한 모델명과 평가 지표만 기재합니다. Transformers/PEFT/LoRA/QLoRA/PyTorch의 사용 여부와 버전, 정확한 모델 저장소 ID는 확인 필요입니다. RAGAS는 본 실험에서 제외했다고 명시되어 있습니다.
 
+[모델·학습 방식의 확인 범위](docs/technical-evidence.md)에 Mistral 버전, LoRA/QLoRA/Unsloth의 구분, 데이터 규모와 평가 대상의 근거를 정리했습니다. 일반적인 기술 설명과 이 실험에서 확인된 설정을 구분합니다. `scratch`는 사전 학습된 base에서 시작한다는 뜻이며, 보고서의 `Full FT` 표현만으로 전체 파라미터 학습 여부를 단정하지 않습니다.
+
 ## Key Features
 
 - 답변 성격이 다른 데이터 → factual/counseling/full로 단계 구분 → 각 분포에서 base 대비 결과 비교.
@@ -71,13 +73,23 @@ Judge는 gpt-4o-mini, 각 50쌍으로 보고되며 Stage1 invalid 1건이 있습
 ```bash
 git clone https://github.com/YIM551/sleep-llm-finetuning.git
 cd sleep-llm-finetuning
+git switch fix/interview-feedback
 ```
 
 README와 CSV를 읽을 수 있는 문서 저장소입니다. 학습 실행 명령이나 requirements를 임의로 만들지 않았습니다. [재현성 체크리스트](docs/reproducibility.md)의 원본을 확보해야 학습·평가를 재실행할 수 있습니다.
 
+Python 3.10 이상이 있으면 2026-09-09에 새로 추가한 메타데이터 검사기를 실행할 수 있습니다. 아래 명령은 검사기가 포함된 checkout의 저장소 루트에서 실행합니다.
+
+```bash
+python scripts/check_run_manifest.py experiments/historical-stage1.json
+python -m unittest discover -s tests -v
+```
+
+첫 명령은 현재 누락 필드를 나열하며 **종료 코드 1**을 반환합니다. 이는 원 학습 설정을 확보하지 못한 상태를 그대로 보여 줍니다. 테스트는 합성 기록의 누락·모순 검사만 검증하며 학습 결과 재현을 의미하지 않습니다. 원본을 복구한 뒤에만 기록을 완성할 수 있습니다.
+
 ## Project Structure
 
-`data/reported-evaluation.csv`: 결과 전사 / `data/README.md`: 출처 / `docs/reproducibility.md`: 누락 정보 / `docs/publication-notes.md`: 공개 범위.
+`data/reported-evaluation.csv`: 결과 전사 / `data/README.md`: 출처 / `docs/reproducibility.md`: 누락 정보와 검사 방법 / `docs/technical-evidence.md`: 기술 개념과 증거 범위 / `experiments/historical-stage1.json`: 불완전한 기록 / `scripts/check_run_manifest.py`: 메타데이터 검사 / `tests/`: 합성 기록 테스트 / `docs/publication-notes.md`: 공개 범위.
 
 ## Technical Challenges
 
