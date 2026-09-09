@@ -1,0 +1,982 @@
+{
+  "recovery_date": "2026-09-10",
+  "source_git_commit": "e86159a177f0a8b56c76c9d2dc72634184359557",
+  "files": [
+    {
+      "file": "historical/git-20251214/.gitignore",
+      "origin": "git-20251214",
+      "source_member": ".gitignore",
+      "original_sha256": "e24e94db665b967e4eeccd744ea0266623e8b81c29fefaf4c3ef89342cd8f03e",
+      "published_sha256": "7b45e8ea89fd539f27c858fcaef3717fd4813b06bd380c04577131ddbb76134d",
+      "action": "2026 publication exception permits the original empty Stage3 placeholder; all original ignore lines retained"
+    },
+    {
+      "file": "historical/git-20251214/configs/base.yaml",
+      "origin": "git-20251214",
+      "source_member": "configs/base.yaml",
+      "original_sha256": "37a8d2ecc53478252c40bdd115568525ace391758c781f711d099e60a55aa719",
+      "published_sha256": "37a8d2ecc53478252c40bdd115568525ace391758c781f711d099e60a55aa719",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/configs/exp_counsel_only.yaml",
+      "origin": "git-20251214",
+      "source_member": "configs/exp_counsel_only.yaml",
+      "original_sha256": "0f90a763de7b5cadb465d30b4a6b4dd2562d44eeb100b38e1a9f2c9f8378c86f",
+      "published_sha256": "0f90a763de7b5cadb465d30b4a6b4dd2562d44eeb100b38e1a9f2c9f8378c86f",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/configs/exp_curriculum.yaml",
+      "origin": "git-20251214",
+      "source_member": "configs/exp_curriculum.yaml",
+      "original_sha256": "3eaa48c10a0cd90d1522b7382edb1688efefa6e98bcce0ea6e77040f41055182",
+      "published_sha256": "3eaa48c10a0cd90d1522b7382edb1688efefa6e98bcce0ea6e77040f41055182",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/configs/exp_factual_only.yaml",
+      "origin": "git-20251214",
+      "source_member": "configs/exp_factual_only.yaml",
+      "original_sha256": "1fe351862ac87579c563c40343abc75c721db73c5f682d35271bebf62cc24edf",
+      "published_sha256": "1fe351862ac87579c563c40343abc75c721db73c5f682d35271bebf62cc24edf",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/configs/exp_stage3_full_scratch.yaml",
+      "origin": "git-20251214",
+      "source_member": "configs/exp_stage3_full_scratch.yaml",
+      "original_sha256": "5a7ee1d21a7daf445c1262190d1b2d0187ba507bec5aee113f0fc3535884b719",
+      "published_sha256": "5a7ee1d21a7daf445c1262190d1b2d0187ba507bec5aee113f0fc3535884b719",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/configs/exp_stage3_full_warmstart.yaml",
+      "origin": "git-20251214",
+      "source_member": "configs/exp_stage3_full_warmstart.yaml",
+      "original_sha256": "64b97a68f7ffbe5e0134b8aa14e197b155614a61b51a72fce6ef668d8bad5d8a",
+      "published_sha256": "64b97a68f7ffbe5e0134b8aa14e197b155614a61b51a72fce6ef668d8bad5d8a",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/data/processed/stage3_custom.jsonl",
+      "origin": "git-20251214",
+      "source_member": "data/processed/stage3_custom.jsonl",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/README.md",
+      "origin": "git-20251214",
+      "source_member": "README.md",
+      "original_sha256": "dcfda8388d9f454007168b04625fd052ccc7ecb3b9aacc4b503e54154d034010",
+      "published_sha256": "dcfda8388d9f454007168b04625fd052ccc7ecb3b9aacc4b503e54154d034010",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare/bertscore_f1_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare/bertscore_f1_box.png",
+      "original_sha256": "c9de3273c85a2ac9f05dd7ef8beb556a5953c9a784254585561800bf868ceac1",
+      "published_sha256": "c9de3273c85a2ac9f05dd7ef8beb556a5953c9a784254585561800bf868ceac1",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare/bertscore_f1_mean_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare/bertscore_f1_mean_bar.png",
+      "original_sha256": "3260ea6a3f8ead54f7a3e5625bb3515668309ac4ae53c3509fdcd22fabebf269",
+      "published_sha256": "3260ea6a3f8ead54f7a3e5625bb3515668309ac4ae53c3509fdcd22fabebf269",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare/bleu_corpus_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare/bleu_corpus_bar.png",
+      "original_sha256": "08892de51eae87b143efb60e04abbd58a6e87072e5d09e89ece7709fab0504d4",
+      "published_sha256": "08892de51eae87b143efb60e04abbd58a6e87072e5d09e89ece7709fab0504d4",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare/per_example_scores.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare/per_example_scores.csv",
+      "original_sha256": "5c9f6a8b570f1e32755c138c7aef1600fbd5999784e70db65b9d59cea03eb3ce",
+      "published_sha256": "5c9f6a8b570f1e32755c138c7aef1600fbd5999784e70db65b9d59cea03eb3ce",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare/pred_chars_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare/pred_chars_box.png",
+      "original_sha256": "6df8cb3de2e9eb95bfc552c62aacc64cf333906e05d184ef7e8ba052002f7e51",
+      "published_sha256": "6df8cb3de2e9eb95bfc552c62aacc64cf333906e05d184ef7e8ba052002f7e51",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare/rouge_mean_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare/rouge_mean_bar.png",
+      "original_sha256": "1271cf1927fad9d24390d0355e2c6c4c02c2332e156b7f5cc0a6d9dcf3a07b57",
+      "published_sha256": "1271cf1927fad9d24390d0355e2c6c4c02c2332e156b7f5cc0a6d9dcf3a07b57",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare/rougeL_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare/rougeL_box.png",
+      "original_sha256": "2a11c156627e7c1799eb2788d157000ce74a8795eea99feead9e632ad63974f8",
+      "published_sha256": "2a11c156627e7c1799eb2788d157000ce74a8795eea99feead9e632ad63974f8",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare/summary_scores.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare/summary_scores.csv",
+      "original_sha256": "5585701bd5eec7fc9947f69665ea1df16f8c490e5f6aa6f5e5b86638e703e450",
+      "published_sha256": "5585701bd5eec7fc9947f69665ea1df16f8c490e5f6aa6f5e5b86638e703e450",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage1set/bertscore_f1_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage1set/bertscore_f1_box.png",
+      "original_sha256": "84f1d4daa89e9046ca296d7577d70132d54c7f9cfd3f606d801bf1d0130ce597",
+      "published_sha256": "84f1d4daa89e9046ca296d7577d70132d54c7f9cfd3f606d801bf1d0130ce597",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage1set/bertscore_f1_mean_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage1set/bertscore_f1_mean_bar.png",
+      "original_sha256": "b240aa0364b8aa0c707a281f778de57be0aeb6f37bd2b5beb9a165c9e2e81694",
+      "published_sha256": "b240aa0364b8aa0c707a281f778de57be0aeb6f37bd2b5beb9a165c9e2e81694",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage1set/bleu_corpus_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage1set/bleu_corpus_bar.png",
+      "original_sha256": "c5170d2740969d2ad5e5386e335d14a691e3939054abcac56f2b65b21e85c2dd",
+      "published_sha256": "c5170d2740969d2ad5e5386e335d14a691e3939054abcac56f2b65b21e85c2dd",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage1set/per_example_scores.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage1set/per_example_scores.csv",
+      "original_sha256": "eb0cb619e3e26af2b53b948699a92ccb3f5cf5745cb5969feeabd2a46bd7c115",
+      "published_sha256": "eb0cb619e3e26af2b53b948699a92ccb3f5cf5745cb5969feeabd2a46bd7c115",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage1set/pred_chars_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage1set/pred_chars_box.png",
+      "original_sha256": "9517776923b3bc3ed18fb5347038d3f541d0428cfdd35598b0a23202a5b6c70b",
+      "published_sha256": "9517776923b3bc3ed18fb5347038d3f541d0428cfdd35598b0a23202a5b6c70b",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage1set/rouge_mean_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage1set/rouge_mean_bar.png",
+      "original_sha256": "f101f918dbe069424d81e35d1da1c5391d0900d69a22806a829291f36d892124",
+      "published_sha256": "f101f918dbe069424d81e35d1da1c5391d0900d69a22806a829291f36d892124",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage1set/rougeL_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage1set/rougeL_box.png",
+      "original_sha256": "2bf72423c01f20ee43c7848dda554c7a6b57eb5c19f902792819407f20c625e8",
+      "published_sha256": "2bf72423c01f20ee43c7848dda554c7a6b57eb5c19f902792819407f20c625e8",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage1set/summary_scores.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage1set/summary_scores.csv",
+      "original_sha256": "89155c691fb7ea9397694fd1bfc57032b0c3c8146daa7686860588f689db62ea",
+      "published_sha256": "89155c691fb7ea9397694fd1bfc57032b0c3c8146daa7686860588f689db62ea",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set/bertscore_f1_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set/bertscore_f1_box.png",
+      "original_sha256": "c5967ac1db117bfb0a3a9fc126c40c2e37fd595f1a42ecb7b4d0ff524c178a70",
+      "published_sha256": "c5967ac1db117bfb0a3a9fc126c40c2e37fd595f1a42ecb7b4d0ff524c178a70",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set/bertscore_f1_mean_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set/bertscore_f1_mean_bar.png",
+      "original_sha256": "379b2ccecfb111c7b870a0fb8a669b2efd1df3bd8616b450c301e6eaf13f9ad7",
+      "published_sha256": "379b2ccecfb111c7b870a0fb8a669b2efd1df3bd8616b450c301e6eaf13f9ad7",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set/bleu_corpus_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set/bleu_corpus_bar.png",
+      "original_sha256": "705f13a48c48835b6a9436d8d02bc3e9e04ad24f38d3a83e9eb256dd3c569fcd",
+      "published_sha256": "705f13a48c48835b6a9436d8d02bc3e9e04ad24f38d3a83e9eb256dd3c569fcd",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set/per_example_scores.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set/per_example_scores.csv",
+      "original_sha256": "9e4036a2de98059d3970c73c6b9ca3a347447b64c2fcc4bf546112198068516a",
+      "published_sha256": "9e4036a2de98059d3970c73c6b9ca3a347447b64c2fcc4bf546112198068516a",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set/pred_chars_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set/pred_chars_box.png",
+      "original_sha256": "ad9e199c7cb7982bbc9f0b32eddba8e9c335827fb2a5a359f652c7dc43a92c57",
+      "published_sha256": "ad9e199c7cb7982bbc9f0b32eddba8e9c335827fb2a5a359f652c7dc43a92c57",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set/rouge_mean_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set/rouge_mean_bar.png",
+      "original_sha256": "95c8424ff66ada91622e6ffea45cccd1ffea1ed57569cb42e726580c34b1efcd",
+      "published_sha256": "95c8424ff66ada91622e6ffea45cccd1ffea1ed57569cb42e726580c34b1efcd",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set/rougeL_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set/rougeL_box.png",
+      "original_sha256": "066dce1ee786cefad59e6c01aa481509313df472aa697a9bee5d5b8fb63869b5",
+      "published_sha256": "066dce1ee786cefad59e6c01aa481509313df472aa697a9bee5d5b8fb63869b5",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set/summary_scores.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set/summary_scores.csv",
+      "original_sha256": "9670e0e105db7af52a09fdcbfb934acbb3b02e4b9f3d56ad3e412795bbdb0ede",
+      "published_sha256": "9670e0e105db7af52a09fdcbfb934acbb3b02e4b9f3d56ad3e412795bbdb0ede",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_det_fair_v4/bertscore_f1_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_det_fair_v4/bertscore_f1_box.png",
+      "original_sha256": "7ed2d88c153394747bed2b7374fdaa32e7234e81f0514d05d2b653cea8c2ba11",
+      "published_sha256": "7ed2d88c153394747bed2b7374fdaa32e7234e81f0514d05d2b653cea8c2ba11",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_det_fair_v4/bertscore_f1_mean_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_det_fair_v4/bertscore_f1_mean_bar.png",
+      "original_sha256": "88ce625435dfe867c1fa5d0ab26366e6327717ccf50b58baa2893548ef4e0bf3",
+      "published_sha256": "88ce625435dfe867c1fa5d0ab26366e6327717ccf50b58baa2893548ef4e0bf3",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_det_fair_v4/bleu_corpus_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_det_fair_v4/bleu_corpus_bar.png",
+      "original_sha256": "73737e381481760575154f21b94741523e541bc0ed61ff21b6ff644e52ebc713",
+      "published_sha256": "73737e381481760575154f21b94741523e541bc0ed61ff21b6ff644e52ebc713",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_det_fair_v4/per_example_scores.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_det_fair_v4/per_example_scores.csv",
+      "original_sha256": "175ea45aaa055679d340b9534ad0604f636564ad6734aafb012215da72fe7119",
+      "published_sha256": "175ea45aaa055679d340b9534ad0604f636564ad6734aafb012215da72fe7119",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_det_fair_v4/pred_chars_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_det_fair_v4/pred_chars_box.png",
+      "original_sha256": "2d2cfc53c8a477dc07286394f01cdb6a7587e640f0048e201edd33afc0e0b5b6",
+      "published_sha256": "2d2cfc53c8a477dc07286394f01cdb6a7587e640f0048e201edd33afc0e0b5b6",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_det_fair_v4/rouge_mean_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_det_fair_v4/rouge_mean_bar.png",
+      "original_sha256": "8f4929046fa2c2fecd0ee22c651c1dd4ee04b81c8c256081154dd317ec6cca43",
+      "published_sha256": "8f4929046fa2c2fecd0ee22c651c1dd4ee04b81c8c256081154dd317ec6cca43",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_det_fair_v4/rougeL_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_det_fair_v4/rougeL_box.png",
+      "original_sha256": "2c4116907ff8daa3a2c589b8ad594326ca34ff0b6527a732e085e64540db659f",
+      "published_sha256": "2c4116907ff8daa3a2c589b8ad594326ca34ff0b6527a732e085e64540db659f",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_det_fair_v4/summary_scores.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_det_fair_v4/summary_scores.csv",
+      "original_sha256": "3c424846146f4e77f21a9503e8d42821a93fdef6f0a8e1db2e9a88a99431bc36",
+      "published_sha256": "3c424846146f4e77f21a9503e8d42821a93fdef6f0a8e1db2e9a88a99431bc36",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_with_base/bertscore_f1_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_with_base/bertscore_f1_box.png",
+      "original_sha256": "22b168dd68e17aa4c312b5e89a06db58753396540c7ffe8362f2fe26e8f51fad",
+      "published_sha256": "22b168dd68e17aa4c312b5e89a06db58753396540c7ffe8362f2fe26e8f51fad",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_with_base/bertscore_f1_mean_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_with_base/bertscore_f1_mean_bar.png",
+      "original_sha256": "a4ecac9f5f031585703c2c92fbcde4865816e4ed25ba669d35b0d0dcbd0fd173",
+      "published_sha256": "a4ecac9f5f031585703c2c92fbcde4865816e4ed25ba669d35b0d0dcbd0fd173",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_with_base/bleu_corpus_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_with_base/bleu_corpus_bar.png",
+      "original_sha256": "5940150e0cdd10e908401737dd556261685e8fd3c5109020bab85278e7be1ff3",
+      "published_sha256": "5940150e0cdd10e908401737dd556261685e8fd3c5109020bab85278e7be1ff3",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_with_base/per_example_scores.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_with_base/per_example_scores.csv",
+      "original_sha256": "d69d3e4b2332d8424d69f2060d70d50cbe13dcb0873aed6c60e08a3bbadd9e9f",
+      "published_sha256": "d69d3e4b2332d8424d69f2060d70d50cbe13dcb0873aed6c60e08a3bbadd9e9f",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_with_base/pred_chars_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_with_base/pred_chars_box.png",
+      "original_sha256": "88e6bc2920cfab03bcd090211ffa23ad2cb5935de74f61a1b75d4d82dc63586d",
+      "published_sha256": "88e6bc2920cfab03bcd090211ffa23ad2cb5935de74f61a1b75d4d82dc63586d",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_with_base/rouge_mean_bar.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_with_base/rouge_mean_bar.png",
+      "original_sha256": "a22c0ead62a8642de7fe1d9575e02e696771448eb51d49f80786934683be91dc",
+      "published_sha256": "a22c0ead62a8642de7fe1d9575e02e696771448eb51d49f80786934683be91dc",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_with_base/rougeL_box.png",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_with_base/rougeL_box.png",
+      "original_sha256": "8d5258ee636942f27bfc582372978b468f82461c0db21eaa674dc266c9ee92c0",
+      "published_sha256": "8d5258ee636942f27bfc582372978b468f82461c0db21eaa674dc266c9ee92c0",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/eval_compare_stage2set_with_base/summary_scores.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/eval_compare_stage2set_with_base/summary_scores.csv",
+      "original_sha256": "e1d46687299953e243a871e307e4e37e1c132ed583f545c688c4de66a48de790",
+      "published_sha256": "e1d46687299953e243a871e307e4e37e1c132ed583f545c688c4de66a48de790",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise/base_vs_stage2/decisions.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise/base_vs_stage2/pairwise.csv",
+      "original_sha256": "13afeebc2134b9e8fb27d46ac2f82e88b4cba8cbfdb35294c734d30907aa7ff5",
+      "published_sha256": "7a61f85db777a1456b3214cda7572dfe4b7fadac48c643dee6af68879bbc9b2c",
+      "action": "question/reference/answers/reasons removed; labels, keys and decisions retained"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise/base_vs_stage2/pairwise.summary.json",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise/base_vs_stage2/pairwise.summary.json",
+      "original_sha256": "0b6a0b1a71ae10d7c09b2b583b11943791fa1eb41649993d07cf517091ec780a",
+      "published_sha256": "0b6a0b1a71ae10d7c09b2b583b11943791fa1eb41649993d07cf517091ec780a",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise/base_vs_stage3_on_stage2/decisions.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise/base_vs_stage3_on_stage2/pairwise.csv",
+      "original_sha256": "143b93bc78287cb937cbc4b5435e10632c0cb25811e4e3d7b842f64869c80348",
+      "published_sha256": "c99a35ffcb6266c6894a5596d0f48b9439f257fb4541e9e33fc00dcb20edd417",
+      "action": "question/reference/answers/reasons removed; labels, keys and decisions retained"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise/base_vs_stage3_on_stage2/pairwise.summary.json",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise/base_vs_stage3_on_stage2/pairwise.summary.json",
+      "original_sha256": "88ba78e547f2e2a374bc8c73dcceaa9683659ea2619b23a75ddf7ec185d8f715",
+      "published_sha256": "88ba78e547f2e2a374bc8c73dcceaa9683659ea2619b23a75ddf7ec185d8f715",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise/stage1_vs_stage3_on_stage1/decisions.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise/stage1_vs_stage3_on_stage1/pairwise.csv",
+      "original_sha256": "77393ac94023fde8ee14317a72a0584e291f7d0398fca5ac5cb5f57b751362bf",
+      "published_sha256": "1fc3833d716847cb0c7445ed8a511fc13123575303d33532e782f124882876d5",
+      "action": "question/reference/answers/reasons removed; labels, keys and decisions retained"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise/stage1_vs_stage3_on_stage1/pairwise.summary.json",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise/stage1_vs_stage3_on_stage1/pairwise.summary.json",
+      "original_sha256": "8b8ec1b2f133f845c4d31180668eb48efefec002aaaf6a5f8203501fcba695c3",
+      "published_sha256": "8b8ec1b2f133f845c4d31180668eb48efefec002aaaf6a5f8203501fcba695c3",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise/stage2_vs_stage3/decisions.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise/stage2_vs_stage3/pairwise.csv",
+      "original_sha256": "66ae6e174cfdd76db257a6bad0b000ab815a7268b59b000792973d4ff6eb7032",
+      "published_sha256": "64a22833f3918f895bb279027c8e9521817854971239ee381793b38ba21c204e",
+      "action": "question/reference/answers/reasons removed; labels, keys and decisions retained"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise/stage2_vs_stage3/pairwise.summary.json",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise/stage2_vs_stage3/pairwise.summary.json",
+      "original_sha256": "824f5182acd09c2e2be88ecd3e32cf0578880287475f944133c795245e365195",
+      "published_sha256": "824f5182acd09c2e2be88ecd3e32cf0578880287475f944133c795245e365195",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise_llm/base_vs_stage2/decisions.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise_llm/base_vs_stage2/pairwise.csv",
+      "original_sha256": "317ba9d8f8d446b74f06d261024549ebfe5d42640e5d305d53598b972a6a93db",
+      "published_sha256": "7e4f2b08d4519d7cf5ef7c63f2fe8d488d31966d5b68494f501ad5d5303d1a40",
+      "action": "question/reference/answers/reasons removed; labels, keys and decisions retained"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise_llm/base_vs_stage2/pairwise.summary.json",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise_llm/base_vs_stage2/pairwise.summary.json",
+      "original_sha256": "59f1c11247e48fd95eb8a4fe0cf8adbb2021ab88458da66061c16b8faf8914eb",
+      "published_sha256": "59f1c11247e48fd95eb8a4fe0cf8adbb2021ab88458da66061c16b8faf8914eb",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise_llm/base_vs_stage3_on_stage2/decisions.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise_llm/base_vs_stage3_on_stage2/pairwise.csv",
+      "original_sha256": "3645a5b62c05b215a9d114016f7ee15cd14f6783c50e8c97a6baa138a1fc584d",
+      "published_sha256": "93c7e60610ae06f1c7196b405bf00dcd5c7c2f2d1311d5a14139b8eebb6ea844",
+      "action": "question/reference/answers/reasons removed; labels, keys and decisions retained"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise_llm/base_vs_stage3_on_stage2/pairwise.summary.json",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise_llm/base_vs_stage3_on_stage2/pairwise.summary.json",
+      "original_sha256": "16a7ccf68b05de23ab3d08dd985109665783d7bde119594061e584da2c39001c",
+      "published_sha256": "16a7ccf68b05de23ab3d08dd985109665783d7bde119594061e584da2c39001c",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise_llm/stage2_vs_stage3_on_stage2/decisions.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise_llm/stage2_vs_stage3_on_stage2/pairwise.csv",
+      "original_sha256": "1f9f751a3d2808abee9b3627b59cbba4c63ea979b69c8e3345bb6bd653830429",
+      "published_sha256": "657a7786e3505ab4de5a77bb26225e4fba7c30300e704826fa0b0986e7b38b9a",
+      "action": "question/reference/answers/reasons removed; labels, keys and decisions retained"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise_llm/stage2_vs_stage3_on_stage2/pairwise.summary.json",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise_llm/stage2_vs_stage3_on_stage2/pairwise.summary.json",
+      "original_sha256": "de0daa91ed3f6e61cae03065c2d753c8429b61d8a57c2dedac70e1cde7f5af9e",
+      "published_sha256": "de0daa91ed3f6e61cae03065c2d753c8429b61d8a57c2dedac70e1cde7f5af9e",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise_llm_det/stage2_det_vs_stage3_det_cleaned_v4/decisions.csv",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise_llm_det/stage2_det_vs_stage3_det_cleaned_v4/pairwise.csv",
+      "original_sha256": "18e91ecc44fe9b7a82706799d7a379e59fc971be3da9370c720ceaaaf046a255",
+      "published_sha256": "d5b04bd80fc9494d1917b9c9602e4e0ac4fe743a5e9cffec83ff7460cb75798e",
+      "action": "question/reference/answers/reasons removed; labels, keys and decisions retained"
+    },
+    {
+      "file": "historical/git-20251214/reports/pairwise_llm_det/stage2_det_vs_stage3_det_cleaned_v4/pairwise.summary.json",
+      "origin": "git-20251214",
+      "source_member": "reports/pairwise_llm_det/stage2_det_vs_stage3_det_cleaned_v4/pairwise.summary.json",
+      "original_sha256": "3a8730b2a828c40c886416d8d876d60eb262ac2cc396f53f563255d70a1a83e7",
+      "published_sha256": "3a8730b2a828c40c886416d8d876d60eb262ac2cc396f53f563255d70a1a83e7",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/requirements.txt",
+      "origin": "git-20251214",
+      "source_member": "requirements.txt",
+      "original_sha256": "4cd8e291eb08687b9e63149186141ba5d1bb21f2d54fb43674616d0c2627a69d",
+      "published_sha256": "4cd8e291eb08687b9e63149186141ba5d1bb21f2d54fb43674616d0c2627a69d",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/results.md",
+      "origin": "git-20251214",
+      "source_member": "results.md",
+      "original_sha256": "01539e8f902f7ba4f717766d8d5daddac855f7ed9989b14cfcd8d3f7f821cada",
+      "published_sha256": "01539e8f902f7ba4f717766d8d5daddac855f7ed9989b14cfcd8d3f7f821cada",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/src/__init__.py",
+      "origin": "git-20251214",
+      "source_member": "src/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/src/eval_generation.py",
+      "origin": "git-20251214",
+      "source_member": "src/eval_generation.py",
+      "original_sha256": "9f48a6431a91a19c22fbc766fd3523a9f859d91401977588a4869e21c528723c",
+      "published_sha256": "9f48a6431a91a19c22fbc766fd3523a9f859d91401977588a4869e21c528723c",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/src/prepare_datasets.py",
+      "origin": "git-20251214",
+      "source_member": "src/prepare_datasets.py",
+      "original_sha256": "7080651e0a8944e6c622f2f19967d8ba71233253f3a3bfac0d00e378a0f48de7",
+      "published_sha256": "7080651e0a8944e6c622f2f19967d8ba71233253f3a3bfac0d00e378a0f48de7",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/src/train_qlora.py",
+      "origin": "git-20251214",
+      "source_member": "src/train_qlora.py",
+      "original_sha256": "b0fa91235539ff2127dc0e6828ecdb19e2caafb6c34247e2dad47508ed4db2c3",
+      "published_sha256": "b0fa91235539ff2127dc0e6828ecdb19e2caafb6c34247e2dad47508ed4db2c3",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/src/utils.py",
+      "origin": "git-20251214",
+      "source_member": "src/utils.py",
+      "original_sha256": "ceecaf0b32b1ea9b76c6ed0772c1f8998c1ddd6d0b0e1dff7d1f2f1e7dfc37bc",
+      "published_sha256": "ceecaf0b32b1ea9b76c6ed0772c1f8998c1ddd6d0b0e1dff7d1f2f1e7dfc37bc",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/tools/collect_eval_metrics.py",
+      "origin": "git-20251214",
+      "source_member": "tools/collect_eval_metrics.py",
+      "original_sha256": "55a9450919db337f577a9fcde752570c03af203f72de3bfd84fe2c2b33a033b4",
+      "published_sha256": "55a9450919db337f577a9fcde752570c03af203f72de3bfd84fe2c2b33a033b4",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/tools/pairwise_judge.py",
+      "origin": "git-20251214",
+      "source_member": "tools/pairwise_judge.py",
+      "original_sha256": "d3cfc538c620f07b90c7931e71b0d798abeecea3d5a821b525d428bfcfd1bf48",
+      "published_sha256": "d3cfc538c620f07b90c7931e71b0d798abeecea3d5a821b525d428bfcfd1bf48",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/git-20251214/tools/plot_eval_compare.py",
+      "origin": "git-20251214",
+      "source_member": "tools/plot_eval_compare.py",
+      "original_sha256": "b1ea0d32dff7629d71865cfe959a3ee69544bd6d5baa3ca953560d9abf73e13b",
+      "published_sha256": "b1ea0d32dff7629d71865cfe959a3ee69544bd6d5baa3ca953560d9abf73e13b",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/metrics_stage1_finetune_vs_base_clean_v4/summary_scores.csv",
+      "origin": "submission-20251215",
+      "source_member": "reports/metrics_stage1_finetune_vs_base_clean_v4/summary_scores.csv",
+      "original_sha256": "5fda75b4112c0ba6c693cc092b7bf60d2495414e555c583ee2804f268fb6209d",
+      "published_sha256": "5fda75b4112c0ba6c693cc092b7bf60d2495414e555c583ee2804f268fb6209d",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/metrics_stage2_finetune_vs_base_clean_v4/summary_scores.csv",
+      "origin": "submission-20251215",
+      "source_member": "reports/metrics_stage2_finetune_vs_base_clean_v4/summary_scores.csv",
+      "original_sha256": "1c273f0f68b523786c909a464efad15084aafdb295bfa9e46482f42fef1ee9e9",
+      "published_sha256": "1c273f0f68b523786c909a464efad15084aafdb295bfa9e46482f42fef1ee9e9",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/metrics_stage3_full_vs_base_clean_v4/summary_scores.csv",
+      "origin": "submission-20251215",
+      "source_member": "reports/metrics_stage3_full_vs_base_clean_v4/summary_scores.csv",
+      "original_sha256": "fbf9f40d00fff2189f6811c293fb1a31c8cb7b893a78be60179cefcd09fbbb9f",
+      "published_sha256": "fbf9f40d00fff2189f6811c293fb1a31c8cb7b893a78be60179cefcd09fbbb9f",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/metrics_stage3_warmstart_vs_base_clean_v4/summary_scores.csv",
+      "origin": "submission-20251215",
+      "source_member": "reports/metrics_stage3_warmstart_vs_base_clean_v4/summary_scores.csv",
+      "original_sha256": "59c5b87e7003e1dbee7528b9924cf48f7d2e7735cd0eaa1f78f3af64e57c0bb9",
+      "published_sha256": "59c5b87e7003e1dbee7528b9924cf48f7d2e7735cd0eaa1f78f3af64e57c0bb9",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/pairwise_llm_ref/stage1/pairwise.csv.summary.json",
+      "origin": "submission-20251215",
+      "source_member": "reports/pairwise_llm_ref/stage1/pairwise.csv.summary.json",
+      "original_sha256": "18891efdbf361d3baef1ba8644b2b2b9eedd6e65f3794ba85c6b6d992ce2cc04",
+      "published_sha256": "18891efdbf361d3baef1ba8644b2b2b9eedd6e65f3794ba85c6b6d992ce2cc04",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/pairwise_llm_ref/stage2/pairwise_50_counsel_refined2pass.csv.summary.json",
+      "origin": "submission-20251215",
+      "source_member": "reports/pairwise_llm_ref/stage2/pairwise_50_counsel_refined2pass.csv.summary.json",
+      "original_sha256": "aa63d3980ad6c957693084fa93e3e63db2d4e26a9538b9eaed1b50f5e59b2be7",
+      "published_sha256": "aa63d3980ad6c957693084fa93e3e63db2d4e26a9538b9eaed1b50f5e59b2be7",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/pairwise_llm_ref/stage2/pairwise_50_overall_refined2pass.csv.summary.json",
+      "origin": "submission-20251215",
+      "source_member": "reports/pairwise_llm_ref/stage2/pairwise_50_overall_refined2pass.csv.summary.json",
+      "original_sha256": "bb19b43f3ae45ede94da5057123e692b2cd7b994eb6ebed978909f260960fab0",
+      "published_sha256": "bb19b43f3ae45ede94da5057123e692b2cd7b994eb6ebed978909f260960fab0",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/pairwise_llm_ref/stage3_full/pairwise_50_faithful_refined2pass.csv.summary.json",
+      "origin": "submission-20251215",
+      "source_member": "reports/pairwise_llm_ref/stage3_full/pairwise_50_faithful_refined2pass.csv.summary.json",
+      "original_sha256": "a431cf31801b749e2112feac69304ce026add9cfd5f0f5272dda660b37ce0696",
+      "published_sha256": "a431cf31801b749e2112feac69304ce026add9cfd5f0f5272dda660b37ce0696",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/pairwise_llm_ref/stage3_warmstart/pairwise_50_faithful_refined2pass.csv.summary.json",
+      "origin": "submission-20251215",
+      "source_member": "reports/pairwise_llm_ref/stage3_warmstart/pairwise_50_faithful_refined2pass.csv.summary.json",
+      "original_sha256": "62baf5e3c336e9a92322fd804c3aec4760f84de3ee87a090faf3b25ee8ea82cc",
+      "published_sha256": "62baf5e3c336e9a92322fd804c3aec4760f84de3ee87a090faf3b25ee8ea82cc",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/improved_metrics_table.csv",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/improved_metrics_table.csv",
+      "original_sha256": "79dd409bd2e3c36fe859eccee0166bf6c42272d74ff9d286b2e252b400154f25",
+      "published_sha256": "79dd409bd2e3c36fe859eccee0166bf6c42272d74ff9d286b2e252b400154f25",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/metrics_stage1_finetune_vs_base_clean_v4_improved_base_vs_ft.png",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/metrics_stage1_finetune_vs_base_clean_v4_improved_base_vs_ft.png",
+      "original_sha256": "489a97fa63632c12ab540d1a5179f9544f4fb37a24e99233e9b37a4adb49fa2f",
+      "published_sha256": "489a97fa63632c12ab540d1a5179f9544f4fb37a24e99233e9b37a4adb49fa2f",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/metrics_stage1_finetune_vs_base_clean_v4_improved_deltas.png",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/metrics_stage1_finetune_vs_base_clean_v4_improved_deltas.png",
+      "original_sha256": "cf0a1568cae4fbefe12082066dc61b4b84a723a8f9c67d472fe16117a16218eb",
+      "published_sha256": "cf0a1568cae4fbefe12082066dc61b4b84a723a8f9c67d472fe16117a16218eb",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/metrics_stage2_finetune_vs_base_clean_v4_improved_base_vs_ft.png",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/metrics_stage2_finetune_vs_base_clean_v4_improved_base_vs_ft.png",
+      "original_sha256": "b73cccbf5ee0e2c2595a8bf964e187c1084dfd9b0539e65f695f6974e2f09b58",
+      "published_sha256": "b73cccbf5ee0e2c2595a8bf964e187c1084dfd9b0539e65f695f6974e2f09b58",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/metrics_stage2_finetune_vs_base_clean_v4_improved_deltas.png",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/metrics_stage2_finetune_vs_base_clean_v4_improved_deltas.png",
+      "original_sha256": "a7963f3e6493d32e9409212ec1d5873012cb95f4432df86c7e94a18731d344eb",
+      "published_sha256": "a7963f3e6493d32e9409212ec1d5873012cb95f4432df86c7e94a18731d344eb",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/metrics_stage3_full_vs_base_clean_v4_improved_base_vs_ft.png",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/metrics_stage3_full_vs_base_clean_v4_improved_base_vs_ft.png",
+      "original_sha256": "cf423e47f1b8f2deaaddc2ed6f283b9ca27ed43e0dd434bdfdfa5e53c52a4a0a",
+      "published_sha256": "cf423e47f1b8f2deaaddc2ed6f283b9ca27ed43e0dd434bdfdfa5e53c52a4a0a",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/metrics_stage3_full_vs_base_clean_v4_improved_deltas.png",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/metrics_stage3_full_vs_base_clean_v4_improved_deltas.png",
+      "original_sha256": "8f187d6942133f7cd8cc0fa590da730fadd4ff95f1c7c3be3c6a0ee87059c132",
+      "published_sha256": "8f187d6942133f7cd8cc0fa590da730fadd4ff95f1c7c3be3c6a0ee87059c132",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/metrics_stage3_warmstart_vs_base_clean_v4_improved_base_vs_ft.png",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/metrics_stage3_warmstart_vs_base_clean_v4_improved_base_vs_ft.png",
+      "original_sha256": "c2a1d91f067e6ca23a89764316d6f900e109dc55e763f1d8442ebbc47df788fb",
+      "published_sha256": "c2a1d91f067e6ca23a89764316d6f900e109dc55e763f1d8442ebbc47df788fb",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/metrics_stage3_warmstart_vs_base_clean_v4_improved_deltas.png",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/metrics_stage3_warmstart_vs_base_clean_v4_improved_deltas.png",
+      "original_sha256": "13e0eb7aac16c7f0a571f306fb9f95d90a627f4497319e44fdf5b77961b2cd72",
+      "published_sha256": "13e0eb7aac16c7f0a571f306fb9f95d90a627f4497319e44fdf5b77961b2cd72",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/pairwise_ft_better.csv",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/pairwise_ft_better.csv",
+      "original_sha256": "c030f17fec80873b3427a339f346f8e0e31374ae7d1f1ff99691bdd58a503733",
+      "published_sha256": "c030f17fec80873b3427a339f346f8e0e31374ae7d1f1ff99691bdd58a503733",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/pairwise_ft_better_base_vs_ft.png",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/pairwise_ft_better_base_vs_ft.png",
+      "original_sha256": "a0b5b0671ce9ea2ecfa42eb9f4088aadf325a5f583fe08d9bd47da1c6eb514d9",
+      "published_sha256": "a0b5b0671ce9ea2ecfa42eb9f4088aadf325a5f583fe08d9bd47da1c6eb514d9",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/reports/plots_finetune_better/pairwise_ft_better_deltas.png",
+      "origin": "submission-20251215",
+      "source_member": "reports/plots_finetune_better/pairwise_ft_better_deltas.png",
+      "original_sha256": "582c257ac6e4d794b0ff4fbb51310fbd5881c340b98d38083505387ba3cde0f4",
+      "published_sha256": "582c257ac6e4d794b0ff4fbb51310fbd5881c340b98d38083505387ba3cde0f4",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/attach_contexts_to_answers.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/attach_contexts_to_answers.py",
+      "original_sha256": "62a63d475fff9772f22cd191a4f8208a4cc656833e99f74d761fe4674c0cd9ff",
+      "published_sha256": "62a63d475fff9772f22cd191a4f8208a4cc656833e99f74d761fe4674c0cd9ff",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/collect_eval_metrics.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/collect_eval_metrics.py",
+      "original_sha256": "55a9450919db337f577a9fcde752570c03af203f72de3bfd84fe2c2b33a033b4",
+      "published_sha256": "55a9450919db337f577a9fcde752570c03af203f72de3bfd84fe2c2b33a033b4",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/collect_ragas_generation_only.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/collect_ragas_generation_only.py",
+      "original_sha256": "ca4f340d00a41dd0efa28b8c9a5e9f886c926eb69ac2fe9bd1161e1b5f762236",
+      "published_sha256": "ca4f340d00a41dd0efa28b8c9a5e9f886c926eb69ac2fe9bd1161e1b5f762236",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/fetch_real_contexts_http.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/fetch_real_contexts_http.py",
+      "original_sha256": "61648022de3ec0143f5b95e763cbb8008d9fc916c5c08a8ac76160b0ba88bf40",
+      "published_sha256": "61648022de3ec0143f5b95e763cbb8008d9fc916c5c08a8ac76160b0ba88bf40",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/make_keylist.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/make_keylist.py",
+      "original_sha256": "0614db3f2e7d92ffb93bd9c05a3471c12e3a7b5ed1ac4380e4e7ddb4ca91cdd8",
+      "published_sha256": "0614db3f2e7d92ffb93bd9c05a3471c12e3a7b5ed1ac4380e4e7ddb4ca91cdd8",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/make_results_md.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/make_results_md.py",
+      "original_sha256": "66c5a1a9bc56277cc363e6a89b9e4ba6c6832dc4084dfb6a8dab74a12fb8d764",
+      "published_sha256": "66c5a1a9bc56277cc363e6a89b9e4ba6c6832dc4084dfb6a8dab74a12fb8d764",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/pairwise_judge.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/pairwise_judge.py",
+      "original_sha256": "d543e9248bd52ca40ca04a8d0442016ccdf334e12d2866d2308a84ea6094b483",
+      "published_sha256": "d543e9248bd52ca40ca04a8d0442016ccdf334e12d2866d2308a84ea6094b483",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/plot_auto_metrics.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/plot_auto_metrics.py",
+      "original_sha256": "7c787baeb0d6c9a37faabab021851d46618177db306d49258ae550a4453b8e5a",
+      "published_sha256": "7c787baeb0d6c9a37faabab021851d46618177db306d49258ae550a4453b8e5a",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/plot_eval_compare.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/plot_eval_compare.py",
+      "original_sha256": "b1ea0d32dff7629d71865cfe959a3ee69544bd6d5baa3ca953560d9abf73e13b",
+      "published_sha256": "b1ea0d32dff7629d71865cfe959a3ee69544bd6d5baa3ca953560d9abf73e13b",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/plot_finetune_better_both.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/plot_finetune_better_both.py",
+      "original_sha256": "d6492c4d9657e351a13f2a4d31c0824de988233acae2d28a6028f28ac530b55d",
+      "published_sha256": "d6492c4d9657e351a13f2a4d31c0824de988233acae2d28a6028f28ac530b55d",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/plot_finetune_better_only.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/plot_finetune_better_only.py",
+      "original_sha256": "967f5320ce6f27c910f197084eea0e27529da1fe75d8062d0ce4c53c91df51f1",
+      "published_sha256": "967f5320ce6f27c910f197084eea0e27529da1fe75d8062d0ce4c53c91df51f1",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/plot_llm_judge.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/plot_llm_judge.py",
+      "original_sha256": "fcc7bda294c7e702959637f58fd4a8f1bd8934c3e5f4cc8abeb12aac4acc1f7d",
+      "published_sha256": "fcc7bda294c7e702959637f58fd4a8f1bd8934c3e5f4cc8abeb12aac4acc1f7d",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/plot_pairwise_summary.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/plot_pairwise_summary.py",
+      "original_sha256": "0d00198062e3c6aed83cda1fa5028ba07585f7346addbaeebc741d92df863c7e",
+      "published_sha256": "0d00198062e3c6aed83cda1fa5028ba07585f7346addbaeebc741d92df863c7e",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/ragas_compare_generation.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/ragas_compare_generation.py",
+      "original_sha256": "f374973b3c62d4822cc68a99c09dd5167bf1c71a427fc7195871dc6299462b19",
+      "published_sha256": "f374973b3c62d4822cc68a99c09dd5167bf1c71a427fc7195871dc6299462b19",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/ragas_eval_50.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/ragas_eval_50.py",
+      "original_sha256": "8dcc15248a93153171662f7b3267b95d26851dabc74c4c83500b8cc164600ff9",
+      "published_sha256": "8dcc15248a93153171662f7b3267b95d26851dabc74c4c83500b8cc164600ff9",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/ragas_eval_proxy.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/ragas_eval_proxy.py",
+      "original_sha256": "a30f6c3d52ca60b340cb540945a6eca1c0222ef2b90c47a942b20c62148bca91",
+      "published_sha256": "a30f6c3d52ca60b340cb540945a6eca1c0222ef2b90c47a942b20c62148bca91",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/refine_2pass.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/refine_2pass.py",
+      "original_sha256": "066497a07502a548f96f10fe4cc6dbc8f53f5c77a17454636182d5f810dc78a4",
+      "published_sha256": "066497a07502a548f96f10fe4cc6dbc8f53f5c77a17454636182d5f810dc78a4",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/run_eval_50_all.sh",
+      "origin": "submission-20251215",
+      "source_member": "tools/run_eval_50_all.sh",
+      "original_sha256": "6e01e67d14b9f407dd98f744eb0fa7f612280488c76c8bbf666cf2351dcf02de",
+      "published_sha256": "6e01e67d14b9f407dd98f744eb0fa7f612280488c76c8bbf666cf2351dcf02de",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/subset_by_keylist.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/subset_by_keylist.py",
+      "original_sha256": "65c4c421231301a83a92bf36af0a92c5563d3e15af437db05e93cfa563d000ff",
+      "published_sha256": "65c4c421231301a83a92bf36af0a92c5563d3e15af437db05e93cfa563d000ff",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/summarize_auto_metrics.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/summarize_auto_metrics.py",
+      "original_sha256": "e88387221fc48d2856ca81dcdfa739fda5942104c1e006644eafe9ffff27be24",
+      "published_sha256": "e88387221fc48d2856ca81dcdfa739fda5942104c1e006644eafe9ffff27be24",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/summarize_bleu_bertscore.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/summarize_bleu_bertscore.py",
+      "original_sha256": "8dc172ecc7962bf2a12f8dae93473f26464326fb6246febbd38ef1236c7ae1b7",
+      "published_sha256": "8dc172ecc7962bf2a12f8dae93473f26464326fb6246febbd38ef1236c7ae1b7",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/summarize_llm_judge.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/summarize_llm_judge.py",
+      "original_sha256": "84d073fca229e419988c39db637899c318c82f662c40f7aa88cf259bb1f37e90",
+      "published_sha256": "84d073fca229e419988c39db637899c318c82f662c40f7aa88cf259bb1f37e90",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/summarize_pairwise.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/summarize_pairwise.py",
+      "original_sha256": "b01c25922ef9d2e42b743acf81c7284ece01cc23d50a28823647e1459a13ba32",
+      "published_sha256": "b01c25922ef9d2e42b743acf81c7284ece01cc23d50a28823647e1459a13ba32",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/summarize_pairwise_csv.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/summarize_pairwise_csv.py",
+      "original_sha256": "0d0e2343dc0919c639ea7b6b75df3886bb7ddd252ef664c7d1faf71d3fc70909",
+      "published_sha256": "0d0e2343dc0919c639ea7b6b75df3886bb7ddd252ef664c7d1faf71d3fc70909",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "historical/submission-20251215/tools/summarize_results.py",
+      "origin": "submission-20251215",
+      "source_member": "tools/summarize_results.py",
+      "original_sha256": "49f9254f5dd88dcf2997219e77da95bc93a3e9deeb07de61fd4a8461b8147042",
+      "published_sha256": "49f9254f5dd88dcf2997219e77da95bc93a3e9deeb07de61fd4a8461b8147042",
+      "action": "byte-preserved"
+    },
+    {
+      "file": "docs/reports/course-report-anonymized.pdf",
+      "origin": "course-report-20251215",
+      "source_member": "private original report",
+      "original_sha256": "7070070d19fa2e4e44f636661b4d8f903a358c4eacf3063907b3a94aad3fb676",
+      "published_sha256": "b6dbdef884439664f423f9df9dcaa200bccd5a93faf3ea3c2436fa748fea24a1",
+      "action": "personal cover page omitted, original printed pages 2-17 retained; document metadata and annotations cleared"
+    }
+  ]
+}

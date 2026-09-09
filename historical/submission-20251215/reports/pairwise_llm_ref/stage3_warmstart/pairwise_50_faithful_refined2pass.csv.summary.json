@@ -1,0 +1,25 @@
+{
+  "A_label": "base_stage3",
+  "B_label": "stage3_warmstart_refined2pass_faithful",
+  "model": "gpt-4o-mini",
+  "judged": 50,
+  "invalid": 0,
+  "winrate": {
+    "base_stage3": 0.1,
+    "stage3_warmstart_refined2pass_faithful": 0.9,
+    "TIE": 0.0,
+    "INVALID": 0.0
+  },
+  "counts": {
+    "base_stage3": 5,
+    "stage3_warmstart_refined2pass_faithful": 45,
+    "TIE": 0,
+    "INVALID": 0
+  },
+  "pct": {
+    "base_stage3": 10.0,
+    "stage3_warmstart_refined2pass_faithful": 90.0,
+    "TIE": 0.0,
+    "INVALID": 0.0
+  }
+}

@@ -1,0 +1,2 @@
+# September 2026 config preflight only; not a reconstruction of the GPU environment.
+PyYAML==6.0.3

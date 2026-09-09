@@ -1,0 +1,76 @@
+{
+  "record_origin": "September 2026 run-metadata audit: source/config recovered on 2026-09-10, but this reported Stage1 run cannot be bound to the Llama default config or a checkpoint.",
+  "run_id": "reported-stage1-factual",
+  "stage": "stage1_factual",
+  "reported_model_label": "base_mistral7b",
+  "model": {
+    "repo_id": null,
+    "revision": null
+  },
+  "tokenizer": {
+    "repo_id": null,
+    "revision": null
+  },
+  "dataset": {
+    "source": null,
+    "license": null,
+    "snapshot_sha256": null,
+    "preprocessing": null,
+    "split_policy": null,
+    "deduplication_policy": null,
+    "total_examples": null,
+    "splits": {
+      "train": {
+        "count": null,
+        "ids_sha256": null
+      },
+      "validation": {
+        "count": null,
+        "ids_sha256": null
+      },
+      "test": {
+        "count": null,
+        "ids_sha256": null
+      }
+    }
+  },
+  "training": {
+    "method": null,
+    "base_weight_bits": null,
+    "quantization_config": null,
+    "optimizer": null,
+    "learning_rate": null,
+    "epochs": null,
+    "batch_size": null,
+    "gradient_accumulation_steps": null,
+    "max_sequence_length": null,
+    "seed": null,
+    "elapsed_seconds": null
+  },
+  "adapter": {
+    "target_modules": null,
+    "rank": null,
+    "alpha": null,
+    "dropout": null
+  },
+  "hardware": {
+    "gpu_model": null,
+    "gpu_memory_gib": null
+  },
+  "evaluation": {
+    "protocol": null,
+    "generation_settings": null
+  },
+  "artifacts": {
+    "training_source_sha256": null,
+    "environment_lock_sha256": null,
+    "checkpoint_sha256": null,
+    "parent_checkpoint_sha256": null,
+    "evaluation_outputs_sha256": null
+  },
+  "configuration_evidence": {
+    "path": "historical/git-20251214/configs/base.yaml",
+    "declared_model_id": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "binding_to_reported_run": "unverified; do not substitute configuration values for run metadata"
+  }
+}

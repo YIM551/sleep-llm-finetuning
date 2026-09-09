@@ -1,0 +1,19 @@
+{
+  "a_label": "stage2_det_cleaned_v2",
+  "b_label": "stage3_det_cleaned_v4",
+  "judged": 188,
+  "wins": {
+    "stage2_det_cleaned_v2": 91,
+    "stage3_det_cleaned_v4": 57,
+    "TIE": 40,
+    "INVALID": 0
+  },
+  "winrate": {
+    "stage2_det_cleaned_v2": 0.48404255319148937,
+    "stage3_det_cleaned_v4": 0.30319148936170215,
+    "TIE": 0.2127659574468085,
+    "INVALID": 0.0
+  },
+  "model": "gpt-4o-mini",
+  "seed": 42
+}

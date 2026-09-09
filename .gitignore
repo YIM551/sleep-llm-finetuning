@@ -33,6 +33,7 @@ checkpoints/
 *.pth
 *.h5
 *.pdf
+!docs/reports/course-report-anonymized.pdf
 *.pptx
 *.hwpx
 *.zip

@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+outputs/
+data/processed/
+*.tgz
+
+# 2026 publication exception: preserve the original empty Stage3 placeholder.
+!data/processed/
+data/processed/*
+!data/processed/stage3_custom.jsonl

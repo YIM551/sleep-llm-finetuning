@@ -1,0 +1,13 @@
+base_config: base.yaml
+exp_name: "med_qlora_curriculum"
+stages:
+  - name: stage1_factual
+    enabled: true
+    file: stage1_factual.jsonl
+    num_epochs: 2
+    sample_size: 80000
+  - name: stage2_counseling
+    enabled: true
+    file: stage2_counseling.jsonl
+    num_epochs: 1
+    sample_size: 120000

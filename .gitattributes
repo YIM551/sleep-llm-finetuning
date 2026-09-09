@@ -1,0 +1,3 @@
+# Preserve the recovered artifact bytes recorded in docs/provenance.json.
+historical/** -text
+docs/reports/*.pdf -text

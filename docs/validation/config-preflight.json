@@ -1,0 +1,101 @@
+{
+  "scope": "preflight only; original trainer is never invoked",
+  "configs": [
+    {
+      "file": "base.yaml",
+      "compatible": false,
+      "declared_model": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "enabled_stages": 0,
+      "errors": [
+        "evaluation_strategy: use quoted 'no'; YAML boolean false is not a strategy and no eval_dataset is supplied",
+        "no enabled stages: the preserved trainer would perform no training"
+      ],
+      "warnings": [
+        "Configuration compatibility does not prove a historical run used this configuration.",
+        "Data existence, checkpoint provenance, dependencies, GPU and held-out separation remain unverified.",
+        "The preserved tokenizer uses model_max_length; it does not read a max_length setting."
+      ]
+    },
+    {
+      "file": "exp_counsel_only.yaml",
+      "compatible": false,
+      "declared_model": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "enabled_stages": 1,
+      "errors": [
+        "evaluation_strategy: use quoted 'no'; YAML boolean false is not a strategy and no eval_dataset is supplied"
+      ],
+      "warnings": [
+        "Configuration compatibility does not prove a historical run used this configuration.",
+        "Data existence, checkpoint provenance, dependencies, GPU and held-out separation remain unverified.",
+        "The preserved tokenizer uses model_max_length; it does not read a max_length setting."
+      ]
+    },
+    {
+      "file": "exp_curriculum.yaml",
+      "compatible": false,
+      "declared_model": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "enabled_stages": 2,
+      "errors": [
+        "evaluation_strategy: use quoted 'no'; YAML boolean false is not a strategy and no eval_dataset is supplied"
+      ],
+      "warnings": [
+        "Configuration compatibility does not prove a historical run used this configuration.",
+        "Data existence, checkpoint provenance, dependencies, GPU and held-out separation remain unverified.",
+        "The preserved tokenizer uses model_max_length; it does not read a max_length setting."
+      ]
+    },
+    {
+      "file": "exp_factual_only.yaml",
+      "compatible": false,
+      "declared_model": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "enabled_stages": 1,
+      "errors": [
+        "evaluation_strategy: use quoted 'no'; YAML boolean false is not a strategy and no eval_dataset is supplied"
+      ],
+      "warnings": [
+        "Configuration compatibility does not prove a historical run used this configuration.",
+        "Data existence, checkpoint provenance, dependencies, GPU and held-out separation remain unverified.",
+        "The preserved tokenizer uses model_max_length; it does not read a max_length setting."
+      ]
+    },
+    {
+      "file": "exp_stage3_full_scratch.yaml",
+      "compatible": false,
+      "declared_model": "mistralai/Mistral-7B-Instruct-v0.3",
+      "enabled_stages": 0,
+      "errors": [
+        "lora: ignored by the preserved trainer",
+        "max_length: ignored by the preserved trainer",
+        "resume_from_checkpoint: ignored by the preserved trainer",
+        "train: ignored by the preserved trainer",
+        "stages[0].train_file: ignored by the preserved trainer",
+        "no enabled stages: the preserved trainer would perform no training"
+      ],
+      "warnings": [
+        "Configuration compatibility does not prove a historical run used this configuration.",
+        "Data existence, checkpoint provenance, dependencies, GPU and held-out separation remain unverified.",
+        "The preserved tokenizer uses model_max_length; it does not read a max_length setting."
+      ]
+    },
+    {
+      "file": "exp_stage3_full_warmstart.yaml",
+      "compatible": false,
+      "declared_model": "mistralai/Mistral-7B-Instruct-v0.3",
+      "enabled_stages": 0,
+      "errors": [
+        "init_adapter_dir: ignored by the preserved trainer",
+        "lora: ignored by the preserved trainer",
+        "max_length: ignored by the preserved trainer",
+        "resume_from_checkpoint: ignored by the preserved trainer",
+        "train: ignored by the preserved trainer",
+        "stages[0].train_file: ignored by the preserved trainer",
+        "no enabled stages: the preserved trainer would perform no training"
+      ],
+      "warnings": [
+        "Configuration compatibility does not prove a historical run used this configuration.",
+        "Data existence, checkpoint provenance, dependencies, GPU and held-out separation remain unverified.",
+        "The preserved tokenizer uses model_max_length; it does not read a max_length setting."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "a_label": "stage2_counseling",
+  "b_label": "stage3_full_on_stage2",
+  "judged": 188,
+  "wins": {
+    "stage2_counseling": 81,
+    "stage3_full_on_stage2": 93,
+    "TIE": 14,
+    "INVALID": 0
+  },
+  "winrate": {
+    "stage2_counseling": 0.4308510638297872,
+    "stage3_full_on_stage2": 0.4946808510638298,
+    "TIE": 0.07446808510638298,
+    "INVALID": 0.0
+  },
+  "model": "gpt-4o-mini",
+  "seed": 42
+}
