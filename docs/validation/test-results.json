@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-10",
+  "python": "3.12.14",
+  "pyyaml": "6.0.3",
+  "unit_tests": {
+    "passed": 19,
+    "failed": 0
+  },
+  "python_syntax_files": 37,
+  "config_preflight_exit": 1,
+  "run_metadata_exit": 1,
+  "pdf_pages": 16,
+  "sensitive_findings": [],
+  "not_run": [
+    "GPU training",
+    "model inference",
+    "external judge API",
+    "clinical validation",
+    "load tests"
+  ]
+}

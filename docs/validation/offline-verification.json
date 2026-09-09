@@ -1,0 +1,297 @@
+{
+  "scope": "offline artifact integrity and saved-score reaggregation; no training/inference",
+  "metrics": {
+    "historical/git-20251214/reports/eval_compare/summary_scores.csv": {
+      "cohorts": [
+        {
+          "stage": "base_mistral7b",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 0
+        },
+        {
+          "stage": "stage1_factual",
+          "n_used": 185,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 3
+        },
+        {
+          "stage": "stage2_counseling",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 0
+        },
+        {
+          "stage": "stage3_full",
+          "n_used": 180,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 1
+        }
+      ],
+      "errors": [],
+      "warnings": [
+        "stage1_factual: 3 repeated question/reference keys; original weighting retained",
+        "stage3_full: 1 repeated question/reference keys; original weighting retained"
+      ],
+      "scope": "arithmetic means only; corpus BLEU cannot be recovered by averaging sentence BLEU"
+    },
+    "historical/git-20251214/reports/eval_compare_stage1set/summary_scores.csv": {
+      "cohorts": [
+        {
+          "stage": "stage1_factual",
+          "n_used": 185,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 3
+        },
+        {
+          "stage": "stage3_full",
+          "n_used": 185,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 3
+        }
+      ],
+      "errors": [],
+      "warnings": [
+        "stage1_factual: 3 repeated question/reference keys; original weighting retained",
+        "stage3_full: 3 repeated question/reference keys; original weighting retained"
+      ],
+      "scope": "arithmetic means only; corpus BLEU cannot be recovered by averaging sentence BLEU"
+    },
+    "historical/git-20251214/reports/eval_compare_stage2set/summary_scores.csv": {
+      "cohorts": [
+        {
+          "stage": "stage2_counseling",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 0
+        },
+        {
+          "stage": "stage3_full",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 0
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "scope": "arithmetic means only; corpus BLEU cannot be recovered by averaging sentence BLEU"
+    },
+    "historical/git-20251214/reports/eval_compare_stage2set_det_fair_v4/summary_scores.csv": {
+      "cohorts": [
+        {
+          "stage": "base_mistral7b",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 0
+        },
+        {
+          "stage": "stage2_counseling",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 0
+        },
+        {
+          "stage": "stage3_full",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 0
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "scope": "arithmetic means only; corpus BLEU cannot be recovered by averaging sentence BLEU"
+    },
+    "historical/git-20251214/reports/eval_compare_stage2set_with_base/summary_scores.csv": {
+      "cohorts": [
+        {
+          "stage": "base_mistral7b",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 0
+        },
+        {
+          "stage": "stage2_counseling",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 0
+        },
+        {
+          "stage": "stage3_full",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": true,
+          "duplicate_keys": 0
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "scope": "arithmetic means only; corpus BLEU cannot be recovered by averaging sentence BLEU"
+    },
+    "historical/submission-20251215/reports/metrics_stage1_finetune_vs_base_clean_v4/summary_scores.csv": {
+      "cohorts": [
+        {
+          "stage": "base_mistral7b",
+          "n_used": 185,
+          "n_total": 200,
+          "raw_scores_available": false
+        },
+        {
+          "stage": "stage1_factual",
+          "n_used": 185,
+          "n_total": 200,
+          "raw_scores_available": false
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "scope": "arithmetic means only; corpus BLEU cannot be recovered by averaging sentence BLEU"
+    },
+    "historical/submission-20251215/reports/metrics_stage2_finetune_vs_base_clean_v4/summary_scores.csv": {
+      "cohorts": [
+        {
+          "stage": "base_mistral7b",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": false
+        },
+        {
+          "stage": "stage2_counseling",
+          "n_used": 188,
+          "n_total": 200,
+          "raw_scores_available": false
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "scope": "arithmetic means only; corpus BLEU cannot be recovered by averaging sentence BLEU"
+    },
+    "historical/submission-20251215/reports/metrics_stage3_full_vs_base_clean_v4/summary_scores.csv": {
+      "cohorts": [
+        {
+          "stage": "base_mistral7b",
+          "n_used": 180,
+          "n_total": 200,
+          "raw_scores_available": false
+        },
+        {
+          "stage": "stage3_full",
+          "n_used": 180,
+          "n_total": 200,
+          "raw_scores_available": false
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "scope": "arithmetic means only; corpus BLEU cannot be recovered by averaging sentence BLEU"
+    },
+    "historical/submission-20251215/reports/metrics_stage3_warmstart_vs_base_clean_v4/summary_scores.csv": {
+      "cohorts": [
+        {
+          "stage": "base_mistral7b",
+          "n_used": 180,
+          "n_total": 200,
+          "raw_scores_available": false
+        },
+        {
+          "stage": "stage3_full",
+          "n_used": 180,
+          "n_total": 200,
+          "raw_scores_available": false
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "scope": "arithmetic means only; corpus BLEU cannot be recovered by averaging sentence BLEU"
+    }
+  },
+  "decisions": {
+    "historical/git-20251214/reports/pairwise/base_vs_stage2/decisions.csv": {
+      "rows": 188,
+      "counts": {
+        "base_mistral7b": 188
+      },
+      "errors": [],
+      "scope": "saved judge decisions only; no API request, re-judging or clinical validation"
+    },
+    "historical/git-20251214/reports/pairwise/base_vs_stage3_on_stage2/decisions.csv": {
+      "rows": 188,
+      "counts": {
+        "base_mistral7b": 188
+      },
+      "errors": [],
+      "scope": "saved judge decisions only; no API request, re-judging or clinical validation"
+    },
+    "historical/git-20251214/reports/pairwise/stage1_vs_stage3_on_stage1/decisions.csv": {
+      "rows": 185,
+      "counts": {
+        "stage1_factual": 87,
+        "stage3_full_on_stage1": 68,
+        "TIE": 30
+      },
+      "errors": [],
+      "scope": "saved judge decisions only; no API request, re-judging or clinical validation"
+    },
+    "historical/git-20251214/reports/pairwise/stage2_vs_stage3/decisions.csv": {
+      "rows": 188,
+      "counts": {
+        "stage2_counseling": 77,
+        "stage3_full_on_stage2": 100,
+        "TIE": 11
+      },
+      "errors": [],
+      "scope": "saved judge decisions only; no API request, re-judging or clinical validation"
+    },
+    "historical/git-20251214/reports/pairwise_llm/base_vs_stage2/decisions.csv": {
+      "rows": 50,
+      "counts": {
+        "base_mistral7b": 50
+      },
+      "errors": [],
+      "scope": "saved judge decisions only; no API request, re-judging or clinical validation"
+    },
+    "historical/git-20251214/reports/pairwise_llm/base_vs_stage3_on_stage2/decisions.csv": {
+      "rows": 50,
+      "counts": {
+        "base_mistral7b": 50
+      },
+      "errors": [],
+      "scope": "saved judge decisions only; no API request, re-judging or clinical validation"
+    },
+    "historical/git-20251214/reports/pairwise_llm/stage2_vs_stage3_on_stage2/decisions.csv": {
+      "rows": 188,
+      "counts": {
+        "stage2_counseling": 81,
+        "stage3_full_on_stage2": 93,
+        "TIE": 14
+      },
+      "errors": [],
+      "scope": "saved judge decisions only; no API request, re-judging or clinical validation"
+    },
+    "historical/git-20251214/reports/pairwise_llm_det/stage2_det_vs_stage3_det_cleaned_v4/decisions.csv": {
+      "rows": 188,
+      "counts": {
+        "stage2_det_cleaned_v2": 91,
+        "TIE": 40,
+        "stage3_det_cleaned_v4": 57
+      },
+      "errors": [],
+      "scope": "saved judge decisions only; no API request, re-judging or clinical validation"
+    }
+  },
+  "errors": [],
+  "provenance_files_verified": 122,
+  "passed": true
+}

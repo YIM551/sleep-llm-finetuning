@@ -1,108 +1,109 @@
-# Sleep LLM Fine-tuning
+# 수면 상담 LLM 파인튜닝과 평가 신뢰성 분석
 
-수면 상담 데이터를 지식형·상담형·통합형으로 나누어 Mistral 7B 계열 모델의 단계적 파인튜닝과 평가 결과를 비교한 보고서 기반 실험 기록입니다.
-
-**핵심 역량: 데이터 분포 단계화, warmstart/scratch 비교, 자동 지표와 LLM-judge의 차이 해석.** 학습 코드·데이터·체크포인트는 미확보이며 공개본은 결과 전사와 실험 설계 문서입니다.
-
-## Project Overview
-
-RAG 서비스의 검색 지연 연구에서 다루지 못한 생성 품질을 별도 실험으로 검토했습니다. Stage1은 지식 설명형, Stage2는 상담형, Stage3는 통합 분포입니다. Stage3에서 base부터 학습하는 scratch와 이전 상담 체크포인트에서 이어 학습하는 warmstart를 비교합니다.
-
-## Recruiter Snapshot
+의료·상담 질문에 대한 생성 답변을 단계별로 비교하고, 자동 평가 점수와 LLM 평가가 달라지는 이유를 분석한 개인 데이터 마이닝 프로젝트입니다.
 
 | 항목 | 내용 |
-| --- | --- |
-| 유형 | 데이터 마이닝 과목의 LLM 도메인 적응 실험 |
-| 역할 | 임나경 단독 명의 보고서의 실험 설계·분석. 코드별 기여 확인 필요 |
-| 기술 | 보고서의 base_mistral7b, ROUGE/BLEU/BERTScore, gpt-4o-mini judge |
-| 데이터 | 수면 지식형/상담형/통합형 데이터. 출처·분할·규모 확인 필요 |
-| 핵심 구현 | 단계별 fine-tuning 및 Stage3 초기화 전략 비교; 구현 원본 미확보 |
-| 결과 | 보고서상 Stage3 judge FT 선호율 warmstart 0.90, scratch 0.92 (각 50쌍) |
+|---|---|
+| 문제 | 검색 지연만으로는 수면 상담 답변의 품질을 설명하기 어려움 |
+| 역할 | 개인 과제의 단계별 실험 설계·평가 도구 구성·결과 분석 |
+| 기술 | Python, Transformers, PEFT, NF4/LoRA, ROUGE, BLEU, BERTScore, LLM judge |
+| 핵심 구현 | 지식형/상담형 JSONL 전처리, adapter 학습 코드, 답변 평가·정제·결과 집계 |
+| 대표 결과 | 저장된 Stage2 자동 평가 ROUGE-1 **0.2701→0.3161**, 유효 **188/200**건 |
+| 검증 | 기존 점수 14 개 그룹·judge 결정 8 개 파일 재집계 일치, 오프라인 테스트 19 개 통과 |
+| 읽기 순서 | [Architecture](docs/architecture.md) · [실험과 실패 분석](docs/experiments.md) · [모델/학습 설정](docs/fine-tuning.md) |
 
-## Architecture
+![동일 Stage2 평가셋에서 저장된 자동 지표 비교](historical/git-20251214/reports/eval_compare_stage2set_det_fair_v4/rouge_mean_bar.png)
 
-다음은 보고서의 실험 설계이며 학습 코드로 검증된 실행 그래프가 아닙니다.
+2025 년에 저장된 결과 그림입니다. 이번에 모델을 다시 학습한 결과가 아닙니다. **Stage3 설정은 Mistral-7B-Instruct-v0.3, Stage1/2 기본 설정은 Llama-3-8B-Instruct 여서 실행 모델의 연결은 추가 확인이 필요합니다.** 높은 judge 선호율에는 정답을 이용한 외부 모델 후처리가 섞여 있어 파인튜닝 단독 효과로 해석하지 않습니다.
+
+## Overview / Problem
+
+[RAG 수면 상담 프로젝트](https://github.com/YIM551/rag-sleep-assistant)에서 다루지 못한 생성 품질을 별도 분석했습니다. 참조 문장과 비슷한 답변이 상담 관점에서도 더 좋은지, 지식형·상담형 데이터를 어떻게 학습시키는 것이 나은지 확인하려 했습니다. 연구·교육 목적이며 의료 진단을 대체하지 않습니다. 이 adapter 가 실제 서비스에 연결되었다는 증거는 확보하지 못했습니다.
+
+## Solution / Key Features
+
+- 서로 다른 schema 를 `instruction/input/output` JSONL 로 통일하는 [전처리](historical/git-20251214/src/prepare_datasets.py).
+- NF4 4bit base 와 rank64 LoRA 를 사용하는 [원 학습 코드](historical/git-20251214/src/train_qlora.py), factual/counsel/curriculum 설정 보존.
+- [자동 지표](historical/git-20251214/tools/collect_eval_metrics.py), [pairwise judge](historical/submission-20251215/tools/pairwise_judge.py), 후처리와 결과 비교 도구 복구.
+- **2026 년 추가:** 기존 결과 재집계·파일 hash·원 config 호환성 검사. 과거 실험과 신규 검증을 분리합니다.
+
+## Architecture / Data Flow
 
 ```mermaid
 flowchart LR
-  B[Base Mistral 7B] --> F[Stage1 factual]
-  F --> C[Stage2 counseling]
-  C --> W[Stage3 warmstart]
-  B --> S[Stage3 scratch]
-  W --> E[ROUGE / BLEU / BERTScore + pairwise judge]
-  S --> E
+  D[의료 QA 와 상담 데이터 로드 시도] --> P[필드 변환과 seed42 shuffle]
+  P --> J[instruction/input/output JSONL]
+  J --> T[활성 stage 의 NF4 base + LoRA 학습]
+  T --> A[adapter 저장]
+  A --> G[참조 질문에 답변 생성]
+  G --> M[자동 지표와 pairwise judge]
+  M --> R[CSV 와 결과 그림]
 ```
 
-## Tech Stack
+원 trainer 의 흐름입니다. Stage3 YAML 은 이 trainer 와 호환되지 않으며 위 경로의 실행 성공을 입증하지 않습니다. 별도 `refine_2pass` 경로는 [상세 구조](docs/architecture.md)에서 분리합니다.
 
-보고서에서 확인한 모델명과 평가 지표만 기재합니다. Transformers/PEFT/LoRA/QLoRA/PyTorch의 사용 여부와 버전, 정확한 모델 저장소 ID는 확인 필요입니다. RAGAS는 본 실험에서 제외했다고 명시되어 있습니다.
+## Tech Stack / My Contribution
 
-[모델·학습 방식의 확인 범위](docs/technical-evidence.md)에 Mistral 버전, LoRA/QLoRA/Unsloth의 구분, 데이터 규모와 평가 대상의 근거를 정리했습니다. 일반적인 기술 설명과 이 실험에서 확인된 설정을 구분합니다. `scratch`는 사전 학습된 base에서 시작한다는 뜻이며, 보고서의 `Full FT` 표현만으로 전체 파라미터 학습 여부를 단정하지 않습니다.
+원 의존성은 Transformers `>=4.40.0`, PyTorch, Datasets, Accelerate, bitsandbytes, PEFT, SentencePiece, PyYAML 입니다. 평가 도구는 pandas/evaluate/sacrebleu/bert-score/matplotlib/OpenAI SDK 도 사용하나 당시 완전한 lock 은 없습니다.
 
-## Key Features
+수면 상담의 생성 품질 문제를 개인 과제로 확장하고 단계별 데이터·초기화 전략 및 평가 방법을 비교했습니다. 복구 자료의 출처는 [provenance](docs/provenance.json)에 남겼습니다. 팀 서비스 전체 구현이나 상용 운영을 개인 성과로 주장하지 않습니다.
 
-- 답변 성격이 다른 데이터 → factual/counseling/full로 단계 구분 → 각 분포에서 base 대비 결과 비교.
-- 학습 초기화 전략 선택 → warmstart와 scratch 비교 → ROUGE/BLEU와 BERTScore의 선택 기준 차이 검토.
-- 문자열 유사도만으로 상담 품질 해석 곤란 → pairwise judge 추가 → 평가 모델 편향과 소표본 한계도 함께 기록.
+## Dataset / Implementation
 
-## How It Works
+전처리 코드에서 의료 QA·대화 데이터 **8 개 로드 대상**을 확인했습니다. 예: `Malikeh1375/medical-question-answering-datasets`, `lavita/MedQuAD`, `avaliev/chat_doctor`. 실패한 source 를 건너뛰므로 실제 사용 개수·최종 학습 행 수는 확인 필요입니다. `80,000/120,000`은 구성의 샘플 상한입니다. [ID·라이선스·schema](docs/dataset.md)를 기록하고 제 3 자 의료 원문은 재배포하지 않습니다.
 
-문제 정의 → 단계별 데이터 구성 → 파인튜닝 → 참조 답변 기반 자동 평가 → base/FT 답변 쌍 평가 → 전략별 해석 순서입니다. 결측·중복 제거, train/test 분할, 오염 검사, 학습률, epoch, seed와 judge 프롬프트는 보고서에서 복구할 수 없어 TODO로 남깁니다.
+원본을 `historical/git-20251214/`와 `historical/submission-20251215/`로 분리했습니다. 핵심 알고리즘은 재작성하지 않았습니다. 신규 [`check_training_config.py`](scripts/check_training_config.py)는 비활성 단계·미사용 warmstart 필드와 YAML `no`의 boolean 변환을 모델 로드 전에 드러냅니다.
 
-## My Contribution
+## Experiments / Evaluation / Results
 
-2025-12-15 단독 명의 보고서는 단계적 실험과 평가 분석을 기술합니다. 학습 소스 미확보 상태에서 직접 작성한 모듈, 코드량, 특정 튜닝 라이브러리 사용을 단정하지 않습니다.
+| 과거 자동 평가 | 유효/전체 | base ROUGE-1 | candidate ROUGE-1 | base BERTScore F1 | candidate F1 |
+|---|---:|---:|---:|---:|---:|
+| Stage1 |185/200|0.3159|0.3939|0.7860|0.8199|
+| Stage2 |188/200|0.2701|0.3161|0.7609|0.7856|
+| Stage3 warmstart |180/200|0.2740|0.2985|0.7634|0.7664|
+| Stage3 scratch/full |180/200|0.2740|0.3041|0.7634|0.7648|
 
-## Results
+[원 summary CSV](historical/submission-20251215/reports/)를 보존했습니다. Stage 별 평가 분포가 달라 행끼리 누적 성능 비교를 하면 안 됩니다. `scratch`는 사전 학습된 base 에서 시작한다는 뜻이고 `full` 명칭이 전체 파라미터 학습을 증명하지 않습니다.
 
-**아래는 보고서 인쇄 pp.7–12의 값이며 재학습 결과가 아닙니다.**
+**실패도 남겼습니다.** 초기 base 대 Stage2/Stage3 judge 에는 candidate **0/188**, **0/50** 결과가 있고, 정제된 Stage2 대 Stage3 는 **91 승/57 승/동률 40**입니다. 후속 Stage2 74%, Stage3 90/92%는 **정답 Reference 를 GPT-4o-mini 에 주고 두 번 재작성한 후보**의 선호율입니다. 순수 FT·일반화·의료 안전성의 성과 수치로 사용하지 않습니다. [실행별 전체 결과와 해석](docs/experiments.md).
 
-| 비교 | base ROUGE-1 | FT ROUGE-1 | base BERTScore F1 | FT BERTScore F1 | FT judge 선호율 |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Stage1 | 0.3159 | 0.3939 | 0.7860 | 0.8199 | 0.66 |
-| Stage2 | 0.2701 | 0.3161 | 0.7609 | 0.7856 | 0.74 |
-| Stage3 warmstart | 0.2740 | 0.2985 | 0.7634 | 0.7664 | 0.90 |
-| Stage3 scratch | 0.2740 | 0.3041 | 0.7634 | 0.7648 | 0.92 |
+## Demo
 
-Judge는 gpt-4o-mini, 각 50쌍으로 보고되며 Stage1 invalid 1건이 있습니다. Stage3의 0.90 대 0.92는 서로 다른 전략 각각의 **base 대비 선호율**이며 warmstart와 scratch의 직접 대결 결과가 아닙니다. 통계적 우월성, 의료 안전성, 실제 수면 개선 효과를 입증하지 않습니다.
-
-[보고된 결과 CSV](data/reported-evaluation.csv)에는 ROUGE/BLEU/BERTScore와 judge 값을 보존했습니다.
+실제 보존된 결과 그림 40 개, 자동 점수와 익명화된 판정 기록을 [Demo 안내](docs/demo.md)에서 볼 수 있습니다. 모델 대화 시연 영상이나 배포된 fine-tuned endpoint 는 확보하지 못했습니다. [개인정보를 제거한 원 보고서](docs/reports/course-report-anonymized.pdf)는 당시 해석을 보존한 자료이며 현재 판단은 [정정 문서](docs/experiments.md)를 우선합니다.
 
 ## Getting Started
+
+Python3.10 이상에서 저장된 결과를 오프라인으로 검증합니다.
 
 ```bash
 git clone https://github.com/YIM551/sleep-llm-finetuning.git
 cd sleep-llm-finetuning
-git switch fix/interview-feedback
-```
-
-README와 CSV를 읽을 수 있는 문서 저장소입니다. 학습 실행 명령이나 requirements를 임의로 만들지 않았습니다. [재현성 체크리스트](docs/reproducibility.md)의 원본을 확보해야 학습·평가를 재실행할 수 있습니다.
-
-Python 3.10 이상이 있으면 2026-09-09에 새로 추가한 메타데이터 검사기를 실행할 수 있습니다. 아래 명령은 검사기가 포함된 checkout의 저장소 루트에서 실행합니다.
-
-```bash
-python scripts/check_run_manifest.py experiments/historical-stage1.json
+python scripts/verify_historical_results.py
+python -m pip install -r requirements-audit.txt
 python -m unittest discover -s tests -v
 ```
 
-첫 명령은 현재 누락 필드를 나열하며 **종료 코드 1**을 반환합니다. 이는 원 학습 설정을 확보하지 못한 상태를 그대로 보여 줍니다. 테스트는 합성 기록의 누락·모순 검사만 검증하며 학습 결과 재현을 의미하지 않습니다. 원본을 복구한 뒤에만 기록을 완성할 수 있습니다.
+[현재 검증 보고서](docs/validation/offline-verification.json). GPU·모델 다운로드·유료 API 호출은 없습니다. 다음 두 검사는 **누락/불일치가 있어 종료 코드 1**을 반환합니다.
+
+```bash
+python scripts/check_training_config.py historical/git-20251214/configs/exp_stage3_full_warmstart.yaml
+python scripts/check_run_manifest.py experiments/historical-stage1.json
+```
+
+가중치·학습 데이터·정합한 runner·환경을 복구하기 전에는 원 학습 명령을 성공 가능한 실행 절차로 안내하지 않습니다. [재현 범위와 명령](docs/reproducibility.md).
 
 ## Project Structure
 
-`data/reported-evaluation.csv`: 결과 전사 / `data/README.md`: 출처 / `docs/reproducibility.md`: 누락 정보와 검사 방법 / `docs/technical-evidence.md`: 기술 개념과 증거 범위 / `experiments/historical-stage1.json`: 불완전한 기록 / `scripts/check_run_manifest.py`: 메타데이터 검사 / `tests/`: 합성 기록 테스트 / `docs/publication-notes.md`: 공개 범위.
+`historical/`: 원 source/config/tools/결과 두 snapshot · `scripts/`, `tests/`: 2026 년 검증 도구 · `docs/`: 구조/데이터/실험/공개출처/검증 결과 · `data/`: 당시 보고서 전사본 · `experiments/`: 불완전한 실제 실행 메타데이터.
 
-## Technical Challenges
+## Technical Challenges / Limitations
 
-문제: 생성 품질은 지연 지표로 설명되지 않음 → 접근: 분포별 파인튜닝과 복수 지표 → 관찰: Stage3 scratch는 ROUGE-1이 높고 warmstart는 BERTScore가 조금 높음 → 교훈: 단일 점수로 전략을 선택하기 어렵습니다. 이 차이가 상담 안전성·의미 안정성을 원인적으로 입증한다는 해석은 보류합니다.
-
-## Limitations
-
-학습·평가 코드와 데이터 미확보, checkpoint/환경 버전 부재, judge 50쌍의 소표본, 평가 프롬프트·답변 순서 편향 미검증이 핵심 한계입니다. 보고서의 단계별 결과는 서로 다른 분포에서 측정되어 단계 진행만으로 성능이 누적 향상됐다고 단정할 수 없습니다.
+모델/config/평가 라벨의 연결, Stage3 필드 불일치, 참조답안 노출 후처리, 반복 key 와 train/test 분리 부재를 발견했습니다. 학습 환경·checkpoint·GPU 메모리·학습 시간·loss 는 아직 복구하지 못했습니다. **저장 점수 재집계 성공과 모델 학습 재현 성공을 구분합니다.**
 
 ## Future Work
 
-정확한 모델 ID·데이터 출처·분할·seed와 체크포인트 복구, 평가 누수 검사, 다중 judge/답변 순서 교환, 블라인드 사람 평가, 검색 품질과 생성 품질 공동 측정을 우선합니다.
+checkpoint 와 데이터 분할 hash 를 복구하고 동일 held-out 질문에서 정답 노출 없는 base/FT 생성과 동일 후처리 조건을 비교합니다. judge 답변 순서 교환·다중 평가자·블라인드 사람 평가를 적용하고 상담 위험 응답도 별도로 평가합니다.
 
 ## References
 
-「수면 상담 도메인에서 단계적 LLM 파인튜닝의 효과 분석: 자동 지표 및 LLM-judge 기반 평가」, 2025-12-15, 인쇄 pp.5–7, 7–12, 16–17. 개인정보 및 원본 이미지 공개 권한 확인 전 PDF는 미공개.
+[Mistral 공식 모델 카드](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) · [LoRA 논문](https://arxiv.org/abs/2106.09685) · [QLoRA 논문](https://arxiv.org/abs/2305.14314) · [데이터 출처](docs/dataset.md) · [공개 범위](docs/publication-notes.md). 과거 source commit 은 `e86159a177f0a8b56c76c9d2dc72634184359557`, Stage3 구성 추가는 `54708b3`입니다.

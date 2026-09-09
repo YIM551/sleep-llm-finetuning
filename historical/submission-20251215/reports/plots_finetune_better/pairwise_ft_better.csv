@@ -1,0 +1,7 @@
+file,ft_label,base_label,ft_winrate,base_winrate,judged,invalid,model
+reports/pairwise_llm_ref/stage3_full/pairwise_50_faithful_refined2pass.csv.summary.json,stage3_full_refined2pass_faithful,base_stage3,0.92,0.08,50,0,gpt-4o-mini
+reports/pairwise_llm_ref/stage3_warmstart/pairwise_50_faithful_refined2pass.csv.summary.json,stage3_warmstart_refined2pass_faithful,base_stage3,0.9,0.1,50,0,gpt-4o-mini
+reports/pairwise_llm_ref/stage2/pairwise_50_counsel_refined2pass.csv.summary.json,stage2_ft_refined2pass,base_stage2,0.74,0.26,50,0,gpt-4o-mini
+reports/pairwise_llm_ref/stage1/pairwise_50_faithful_cleanv4.csv.summary.json,stage1_finetune,base_stage1,0.66,0.32,50,1,gpt-4o-mini
+reports/pairwise_llm_ref/stage2/pairwise_50_overall_refined2pass.csv.summary.json,stage2_ft_refined2pass,base_stage2,0.6,0.4,50,0,gpt-4o-mini
+reports/pairwise_llm_ref/stage1/pairwise.csv.summary.json,stage1_finetune,base_stage1,0.5913978494623656,0.3333333333333333,186,13,gpt-4o-mini

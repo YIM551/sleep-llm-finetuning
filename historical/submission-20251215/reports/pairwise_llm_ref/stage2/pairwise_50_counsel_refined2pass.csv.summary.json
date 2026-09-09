@@ -1,0 +1,25 @@
+{
+  "A_label": "base_stage2",
+  "B_label": "stage2_ft_refined2pass",
+  "model": "gpt-4o-mini",
+  "judged": 50,
+  "invalid": 0,
+  "winrate": {
+    "base_stage2": 0.26,
+    "stage2_ft_refined2pass": 0.74,
+    "TIE": 0.0,
+    "INVALID": 0.0
+  },
+  "counts": {
+    "base_stage2": 13,
+    "stage2_ft_refined2pass": 37,
+    "TIE": 0,
+    "INVALID": 0
+  },
+  "pct": {
+    "base_stage2": 26.0,
+    "stage2_ft_refined2pass": 74.0,
+    "TIE": 0.0,
+    "INVALID": 0.0
+  }
+}

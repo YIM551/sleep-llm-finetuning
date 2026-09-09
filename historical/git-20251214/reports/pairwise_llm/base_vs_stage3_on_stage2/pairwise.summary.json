@@ -1,0 +1,19 @@
+{
+  "a_label": "base_mistral7b",
+  "b_label": "stage3_full_on_stage2",
+  "judged": 50,
+  "wins": {
+    "base_mistral7b": 50,
+    "stage3_full_on_stage2": 0,
+    "TIE": 0,
+    "INVALID": 0
+  },
+  "winrate": {
+    "base_mistral7b": 1.0,
+    "stage3_full_on_stage2": 0.0,
+    "TIE": 0.0,
+    "INVALID": 0.0
+  },
+  "model": "gpt-4o-mini",
+  "seed": 42
+}

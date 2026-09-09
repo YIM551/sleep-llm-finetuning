@@ -1,12 +1,15 @@
 {
   "name": "sleep-llm-finetuning",
   "owner": "YIM551",
-  "description": "Report-backed study of staged sleep-domain LLM fine-tuning with automatic metrics and pairwise LLM-judge evaluation.",
+  "description": "Staged medical LLM fine-tuning experiments with recovered QLoRA code, evaluation artifacts and offline audits of scoring and reference leakage.",
   "topics": [
     "llm",
-    "fine-tuning",
+    "qlora",
+    "lora",
     "mistral",
     "model-evaluation",
+    "data-mining",
+    "reproducibility",
     "rouge",
     "bertscore"
   ]

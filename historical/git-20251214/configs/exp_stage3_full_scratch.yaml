@@ -1,0 +1,29 @@
+base_model_name: mistralai/Mistral-7B-Instruct-v0.3
+output_dir: outputs/exp_stage3_full_scratch
+max_length: 1024
+lora:
+  r: 64
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+train:
+  per_device_batch_size: 2
+  grad_accum: 16
+  lr: 0.0002
+  warmup_ratio: 0.03
+  logging_steps: 50
+  save_total_limit: 3
+  save_strategy: steps
+  save_steps: 100
+stages:
+- name: stage3_full
+  train_file: data/processed/stage3_full_s1_plus_s2_shuffled.jsonl
+  num_epochs: 1
+resume_from_checkpoint: auto

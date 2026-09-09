@@ -1,0 +1,19 @@
+{
+  "a_label": "stage1_factual",
+  "b_label": "stage3_full_on_stage1",
+  "judged": 185,
+  "wins": {
+    "stage1_factual": 87,
+    "stage3_full_on_stage1": 68,
+    "TIE": 30,
+    "INVALID": 0
+  },
+  "winrate": {
+    "stage1_factual": 0.4702702702702703,
+    "stage3_full_on_stage1": 0.3675675675675676,
+    "TIE": 0.16216216216216217,
+    "INVALID": 0.0
+  },
+  "model": "gpt-4o-mini",
+  "seed": 42
+}

@@ -1,0 +1,25 @@
+{
+  "A_label": "base_stage1",
+  "B_label": "stage1_finetune",
+  "model": "gpt-4o-mini",
+  "judged": 186,
+  "invalid": 13,
+  "winrate": {
+    "base_stage1": 0.3333333333333333,
+    "stage1_finetune": 0.5913978494623656,
+    "TIE": 0.005376344086021506,
+    "INVALID": 0.06989247311827956
+  },
+  "counts": {
+    "base_stage1": 62,
+    "stage1_finetune": 110,
+    "TIE": 1,
+    "INVALID": 13
+  },
+  "pct": {
+    "base_stage1": 33.333333333333336,
+    "stage1_finetune": 59.13978494623656,
+    "TIE": 0.5376344086021505,
+    "INVALID": 6.989247311827957
+  }
+}
